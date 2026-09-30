@@ -3,7 +3,8 @@ export type ProviderName =
   | "BROWSERBASE"
   | "ANCHORBROWSER"
   | "HYPERBROWSER"
-  | "KERNEL";
+  | "KERNEL"
+  | "GEONODE";
 
 export type MetricRecord = {
   created_at: string;

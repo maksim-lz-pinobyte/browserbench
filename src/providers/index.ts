@@ -4,6 +4,7 @@ import { SteelProvider } from "./steel.js";
 import { AnchorBrowserProvider } from "./anchorbrowser.js";
 import { HyperbrowserProvider } from "./hyperbrowser.js";
 import { KernelProvider } from "./kernel.js";
+import { GeonodeProvider } from "./geonode.js";
 
 export function resolveProvider(name: string): ProviderClient {
   const key = name.trim().toLowerCase();
@@ -15,5 +16,6 @@ export function resolveProvider(name: string): ProviderClient {
   if (key === "hyperbrowser" || key === "hyper")
     return new HyperbrowserProvider();
   if (key === "kernel") return new KernelProvider();
+  if (key === "geonode") return new GeonodeProvider();
   throw new Error(`Unknown provider: ${name}`);
 }
